@@ -1,5 +1,9 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import net.fabricmc.loom.task.RemapJarTask
+
 plugins {
 	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+	id 'com.gradleup.shadow' version '9.3.1'
 	id 'maven-publish'
 }
 
@@ -10,45 +14,60 @@ base {
 	archivesName = project.archives_base_name
 }
 
-repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+configurations {
+	fabricApi {}
+}
+
+loom {
+	noIntermediateMappings()
 }
 
 dependencies {
-	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.officialMojangMappings()
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	mappings loom.layered {}
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	
-}
-
-processResources {
-	inputs.property "version", project.version
-
-	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
-	}
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	fabricApi "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
+	it.options.release = 25
 }
 
 java {
-	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-	// if it is present.
-	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+tasks.register('shadeFapiJar', ShadowJar) {
+	group 'build'
+
+	archiveClassifier = 'new'
+	configurations = [project.configurations.fabricApi]
+	include 'net/fabricmc/fabric/api/**/*.class'
+}
+
+tasks.register('remapFapiJar', RemapJarTask) {
+	group 'build'
+	dependsOn 'shadeFapiJar'
+
+	archiveClassifier = 'old'
+	inputFile = tasks.shadeFapiJar.archiveFile
+	classpath = sourceSets.main.compileClasspath
+
+	customMappings = files('renames.tiny')
+	sourceNamespace = 'renamed'
+	targetNamespace = 'old'
+}
+
+tasks.register('stubFapiJar', StubJar) {
+	group 'build'
+	dependsOn 'remapFapiJar'
+
+	archiveClassifier = 'stub'
+	inputJar = tasks.remapFapiJar.archiveFile
 }
 
 jar {
@@ -64,7 +83,9 @@ publishing {
 	publications {
 		create("mavenJava", MavenPublication) {
 			artifactId = project.archives_base_name
-			from components.java
+			artifact(tasks.stubFapiJar) {
+				classifier = null
+			}
 		}
 	}
 

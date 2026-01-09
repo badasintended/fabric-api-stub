@@ -1,0 +1,416 @@
+tiny	2	0	old	renamed
+c	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext	
+	m	(Ljava/util/Optional;)V	setFoliageColor	setFoliageColorOverride
+	m	(I)V	setFoliageColor	setFoliageColorOverride
+	m	(Ljava/util/OptionalInt;)V	setFoliageColor	setFoliageColorOverride
+	m	()V	clearFoliageColor	clearFoliageColorOverride
+	m	(Ljava/util/Optional;)V	setDryFoliageColor	setDryFoliageColorOverride
+	m	(I)V	setDryFoliageColor	setDryFoliageColorOverride
+	m	(Ljava/util/OptionalInt;)V	setDryFoliageColor	setDryFoliageColorOverride
+	m	()V	clearDryFoliageColor	clearDryFoliageColorOverride
+	m	(Ljava/util/Optional;)V	setGrassColor	setGrassColorOverride
+	m	(I)V	setGrassColor	setGrassColorOverride
+	m	(Ljava/util/OptionalInt;)V	setGrassColor	setGrassColorOverride
+	m	()V	clearGrassColor	clearGrassColorOverride
+c	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$SpawnSettingsContext	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$MobSpawnSettingsContext
+	m	(F)V	setCreatureSpawnProbability	setCreatureGenerationProbability
+	m	(Lnet/minecraft/world/entity/MobCategory;)Ljava/util/List;	getSpawnEntries	getMobs
+	m	(Lnet/minecraft/world/entity/EntityType;DD)V	setSpawnCost	addMobCharge
+	m	(Lnet/minecraft/world/entity/EntityType;)V	clearSpawnCost	clearMobCharge
+c	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext	
+	m	()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$SpawnSettingsContext;	getSpawnSettings	getMobSpawnSettings
+c	net/fabricmc/fabric/api/biome/v1/BiomeSelectionContext	
+	m	()Lnet/minecraft/core/Holder;	getBiomeRegistryEntry	getBiomeHolder
+c	net/fabricmc/fabric/api/client/command/v2/ClientCommandManager	net/fabricmc/fabric/api/client/command/v2/ClientCommands
+c	net/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource	
+	m	()Lnet/minecraft/client/multiplayer/ClientLevel;	getWorld	getLevel
+c	net/fabricmc/fabric/api/client/datagen/v1/builder/SoundTypeBuilder$EntryBuilder	net/fabricmc/fabric/api/client/datagen/v1/builder/SoundTypeBuilder$RegistrationBuilder
+c	net/fabricmc/fabric/api/client/datagen/v1/builder/SoundTypeBuilder	
+	m	(Lnet/minecraft/sounds/SoundSource;)Lnet/fabricmc/fabric/api/client/datagen/v1/builder/SoundTypeBuilder;	category	source
+c	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndWorldTick	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$EndLevelTick
+c	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$StartWorldTick	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents$StartLevelTick
+c	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents	
+	f	Lnet/fabricmc/fabric/api/event/Event;	START_WORLD_TICK	START_LEVEL_TICK
+	f	Lnet/fabricmc/fabric/api/event/Event;	END_WORLD_TICK	END_LEVEL_TICK
+c	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientWorldEvents$AfterClientWorldChange	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLevelEvents$AfterClientLevelChange
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/ClientLevel;)V	afterWorldChange	afterLevelChange
+c	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientWorldEvents	net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLevelEvents
+	f	Lnet/fabricmc/fabric/api/event/Event;	AFTER_CLIENT_WORLD_CHANGE	AFTER_CLIENT_LEVEL_CHANGE
+c	net/fabricmc/fabric/api/client/itemgroup/v1/FabricCreativeInventoryScreen	net/fabricmc/fabric/api/client/creativetab/v1/FabricCreativeModeInventoryScreen
+	m	(I)Ljava/util/List;	getItemGroupsOnPage	getTabsOnPage
+	m	()Lnet/minecraft/world/item/CreativeModeTab;	getSelectedItemGroup	getSelectedTab
+	m	(Lnet/minecraft/world/item/CreativeModeTab;)Z	setSelectedItemGroup	setSelectedTab
+c	net/fabricmc/fabric/api/client/itemgroup/v1/package-info	net/fabricmc/fabric/api/client/creativetab/v1/package-info
+c	net/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper	net/fabricmc/fabric/api/client/keymapping/v1/KeyMappingHelper
+	m	(Lnet/minecraft/client/KeyMapping;)Lnet/minecraft/client/KeyMapping;	registerKeyBinding	registerKeyMapping
+c	net/fabricmc/fabric/api/client/keybinding/v1/package-info	net/fabricmc/fabric/api/client/keymapping/v1/package-info
+c	net/fabricmc/fabric/api/client/model/loading/v1/FabricBakedModelManager	net/fabricmc/fabric/api/client/model/loading/v1/FabricModelManager
+c	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeItem$Context	
+	m	()Lnet/minecraft/client/renderer/item/ItemModel$BakingContext;	bakeContext	bakingContext
+c	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeItem$Context	
+	m	()Lnet/minecraft/client/renderer/item/ItemModel$BakingContext;	bakeContext	bakingContext
+c	net/fabricmc/fabric/api/client/model/loading/v1/wrapper/WrapperUnbakedGroupedBlockStateModel	net/fabricmc/fabric/api/client/model/loading/v1/wrapper/WrapperUnbakedRootBlockStateModel
+c	net/fabricmc/fabric/api/client/networking/v1/C2SConfigurationChannelEvents$Register	net/fabricmc/fabric/api/client/networking/v1/ServerboundConfigurationChannelEvents$Register
+c	net/fabricmc/fabric/api/client/networking/v1/C2SConfigurationChannelEvents$Unregister	net/fabricmc/fabric/api/client/networking/v1/ServerboundConfigurationChannelEvents$Unregister
+c	net/fabricmc/fabric/api/client/networking/v1/C2SConfigurationChannelEvents	net/fabricmc/fabric/api/client/networking/v1/ServerboundConfigurationChannelEvents
+c	net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents$Register	net/fabricmc/fabric/api/client/networking/v1/ServerboundPlayChannelEvents$Register
+c	net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents$Unregister	net/fabricmc/fabric/api/client/networking/v1/ServerboundPlayChannelEvents$Unregister
+c	net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents	net/fabricmc/fabric/api/client/networking/v1/ServerboundPlayChannelEvents
+c	net/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context	
+	m	()Lnet/minecraft/client/multiplayer/ClientConfigurationPacketListenerImpl;	networkHandler	packetListener
+c	net/fabricmc/fabric/api/client/networking/v1/ClientPlayNetworking	
+	m	(Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)Lnet/minecraft/network/protocol/Packet;	createC2SPacket	createServerboundPacket
+c	net/fabricmc/fabric/api/client/particle/v1/FabricSpriteProvider	net/fabricmc/fabric/api/client/particle/v1/FabricSpriteSet
+c	net/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory	net/fabricmc/fabric/api/client/particle/v1/ParticleProviderRegistry$PendingParticleProvider
+c	net/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry	net/fabricmc/fabric/api/client/particle/v1/ParticleProviderRegistry
+c	net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint	net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowTerrainParticleTint
+	m	(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/core/BlockPos;)Z	allowBlockDustTint	allowTerrainParticleTint
+c	net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents	
+	f	Lnet/fabricmc/fabric/api/event/Event;	ALLOW_BLOCK_DUST_TINT	ALLOW_TERRAIN_PARTICLE_TINT
+c	net/fabricmc/fabric/api/client/particle/v1/ParticleRendererRegistry	net/fabricmc/fabric/api/client/particle/v1/ParticleGroupRegistry
+	m	(Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/particle/ParticleRenderType;	getParticleTextureSheet	getParticleRenderType
+c	net/fabricmc/fabric/api/client/rendering/v1/AtlasSourceRegistry	net/fabricmc/fabric/api/client/rendering/v1/SpriteSourceRegistry
+c	net/fabricmc/fabric/api/client/rendering/v1/BlockRenderLayerMap	net/fabricmc/fabric/api/client/rendering/v1/ChunkSectionLayerMap
+c	net/fabricmc/fabric/api/client/rendering/v1/DrawItemStackOverlayCallback	net/fabricmc/fabric/api/client/rendering/v1/RenderItemDecorationsCallback
+	m	(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;II)V	onDrawItemStackOverlay	onRenderItemDecorations
+c	net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedEquipmentModelDataProvider	net/fabricmc/fabric/api/client/rendering/v1/ModelLayerRegistry$TexturedArmorModelSetProvider
+	m	()Lnet/minecraft/client/renderer/entity/ArmorModelSet;	createEquipmentModelData	createArmorModelSet
+c	net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedModelDataProvider	net/fabricmc/fabric/api/client/rendering/v1/ModelLayerRegistry$TexturedLayerDefinitionProvider
+	m	()Lnet/minecraft/client/model/geom/builders/LayerDefinition;	createModelData	createLayerDefinition
+c	net/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry	net/fabricmc/fabric/api/client/rendering/v1/ModelLayerRegistry
+	m	(Lnet/minecraft/client/renderer/entity/ArmorModelSet;Lnet/fabricmc/fabric/api/client/rendering/v1/EntityModelLayerRegistry$TexturedEquipmentModelDataProvider;)V	registerEquipmentModelLayers	registerArmorModelLayers
+c	net/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRendererRegistrationCallback$RegistrationHelper	net/fabricmc/fabric/api/client/rendering/v1/LivingEntityRenderLayerRegistrationCallback$RegistrationHelper
+c	net/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRendererRegistrationCallback	net/fabricmc/fabric/api/client/rendering/v1/LivingEntityRenderLayerRegistrationCallback
+	m	(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/LivingEntityRenderer;Lnet/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRendererRegistrationCallback$RegistrationHelper;Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;)V	registerRenderers	registerLayers
+c	net/fabricmc/fabric/api/client/rendering/v1/SpecialGuiElementRegistry$Context	net/fabricmc/fabric/api/client/rendering/v1/PictureInPictureRendererRegistry$Context
+	m	()Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;	vertexConsumers	bufferSource
+	m	()Lnet/minecraft/client/Minecraft;	client	minecraft
+	m	()Lnet/minecraft/client/renderer/SubmitNodeCollector;	orderedRenderCommandQueue	submitNodeCollector
+c	net/fabricmc/fabric/api/client/rendering/v1/SpecialGuiElementRegistry$Factory	net/fabricmc/fabric/api/client/rendering/v1/PictureInPictureRendererRegistry$Factory
+	m	(Lnet/fabricmc/fabric/api/client/rendering/v1/SpecialGuiElementRegistry$Context;)Lnet/minecraft/client/gui/render/pip/PictureInPictureRenderer;	createSpecialRenderer	createRenderer
+c	net/fabricmc/fabric/api/client/rendering/v1/SpecialGuiElementRegistry	net/fabricmc/fabric/api/client/rendering/v1/PictureInPictureRendererRegistry
+c	net/fabricmc/fabric/api/client/rendering/v1/TooltipComponentCallback	net/fabricmc/fabric/api/client/rendering/v1/ClientTooltipComponentCallback
+	m	(Lnet/minecraft/world/inventory/tooltip/TooltipComponent;)Lnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipComponent;	getComponent	getClientComponent
+c	net/fabricmc/fabric/api/client/rendering/v1/hud/VanillaHudElements	
+	f	Lnet/minecraft/resources/Identifier;	STATUS_EFFECTS	MOB_EFFECTS
+c	net/fabricmc/fabric/api/client/rendering/v1/world/AbstractWorldRenderContext	net/fabricmc/fabric/api/client/rendering/v1/level/AbstractLevelRenderContext
+	m	()Lnet/minecraft/client/renderer/LevelRenderer;	worldRenderer	levelRenderer
+	m	()Lnet/minecraft/client/renderer/state/LevelRenderState;	worldState	levelState
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldExtractionContext	net/fabricmc/fabric/api/client/rendering/v1/level/LevelExtractionContext
+	m	()Lnet/minecraft/client/multiplayer/ClientLevel;	world	level
+	m	()Lnet/minecraft/client/DeltaTracker;	tickCounter	deltaTracker
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderContext	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderContext
+	m	()Lnet/minecraft/client/renderer/SubmitNodeCollector;	commandQueue	submitNodeCollector
+	m	()Lcom/mojang/blaze3d/vertex/PoseStack;	matrices	poseStack
+	m	()Lnet/minecraft/client/renderer/MultiBufferSource;	consumers	bufferSource
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$AfterBlockOutlineExtraction	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$AfterBlockOutlineExtraction
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$AfterEntities	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$AfterEntities
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$BeforeBlockOutline	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$BeforeBlockOutline
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$BeforeEntities	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$BeforeEntities
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$BeforeTranslucent	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$BeforeTranslucent
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$DebugRender	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$DebugRender
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$EndExtraction	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$EndExtraction
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$EndMain	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$EndMain
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents$StartMain	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents$StartMain
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldRenderEvents	net/fabricmc/fabric/api/client/rendering/v1/level/LevelRenderEvents
+c	net/fabricmc/fabric/api/client/rendering/v1/world/WorldTerrainRenderContext	net/fabricmc/fabric/api/client/rendering/v1/level/LevelTerrainRenderContext
+	m	()Lnet/minecraft/client/renderer/chunk/ChunkSectionsToRender;	sectionState	sectionsToRender
+c	net/fabricmc/fabric/api/client/rendering/v1/world/package-info	net/fabricmc/fabric/api/client/rendering/v1/level/package-info
+c	net/fabricmc/fabric/api/client/screen/v1/Screens	
+	m	(Lnet/minecraft/client/gui/screens/Screen;)Ljava/util/List;	getButtons	getWidgets
+	m	(Lnet/minecraft/client/gui/screens/Screen;)Lnet/minecraft/client/gui/Font;	getTextRenderer	getFont
+	m	(Lnet/minecraft/client/gui/screens/Screen;)Lnet/minecraft/client/Minecraft;	getClient	getMinecraft
+c	net/fabricmc/fabric/api/command/v2/FabricEntitySelectorReader	net/fabricmc/fabric/api/command/v2/FabricEntitySelectorParser
+c	net/fabricmc/fabric/api/datagen/v1/FabricDataOutput	net/fabricmc/fabric/api/datagen/v1/FabricPackOutput
+c	net/fabricmc/fabric/api/datagen/v1/loot/FabricBlockLootTableGenerator	net/fabricmc/fabric/api/datagen/v1/loot/FabricBlockLootSubProvider
+c	net/fabricmc/fabric/api/datagen/v1/loot/FabricEntityLootTableGenerator	net/fabricmc/fabric/api/datagen/v1/loot/FabricEntityLootSubProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricAdvancementProvider	
+	f	Lnet/minecraft/data/PackOutput$PathProvider;	pathResolver	pathProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricBlockLootTableProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricBlockLootSubProvider
+	f	Ljava/util/concurrent/CompletableFuture;	registryLookupFuture	registriesFuture
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricCodecDataProvider	
+	f	Lnet/minecraft/data/PackOutput$PathProvider;	pathResolver	pathProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider$RegistryEntries	
+	f	Ljava/util/Map;	entries	resources
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider	
+	m	(Lnet/minecraft/data/CachedOutput;Lnet/minecraft/resources/RegistryOps;Lnet/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider$RegistryEntries;)Ljava/util/concurrent/CompletableFuture;	writeRegistryEntries	writeHolders
+	m	(I)[Ljava/util/concurrent/CompletableFuture;	lambda$writeRegistryEntries$0	lambda$writeHolders$0
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricEntityLootTableProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricEntityLootSubProvider
+	f	Ljava/util/concurrent/CompletableFuture;	registryLookupFuture	registriesFuture
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricLanguageProvider	
+	f	Lnet/fabricmc/fabric/api/datagen/v1/FabricDataOutput;	dataOutput	packOutput
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricLootTableProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricLootTableSubProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricProvidedTagBuilder	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagAppender
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$1	
+	f	Lnet/minecraft/data/recipes/RecipeOutput;	val$exporter	val$output
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$2	
+	f	Lnet/minecraft/core/HolderLookup$Provider;	val$wrapperLookup	val$registries
+	f	Lnet/minecraft/data/CachedOutput;	val$writer	val$output
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$AliasGroupBuilder	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$AliasGroupBuilder
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$BlockEntityTypeTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$BlockEntityTypeTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$BlockTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$BlockTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$EntityTypeTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$EntityTypeTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$FabricValueLookupTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$FabricIntrinsicHolderTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$FluidTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$FluidTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$ItemTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$ItemTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider
+c	net/fabricmc/fabric/api/datagen/v1/provider/SimpleFabricLootTableProvider	net/fabricmc/fabric/api/datagen/v1/provider/SimpleFabricLootTableSubProvider
+	f	Ljava/util/concurrent/CompletableFuture;	registryLookup	registryLookupFuture
+	f	Lnet/minecraft/util/context/ContextKeySet;	contextType	contextParamSet
+c	net/fabricmc/fabric/api/datagen/v1/recipe/FabricRecipeExporter	net/fabricmc/fabric/api/datagen/v1/recipe/FabricRecipeOutput
+c	net/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey	
+	f	Lnet/minecraft/server/level/ServerLevel;	world	level
+	m	()Lnet/minecraft/server/level/ServerLevel;	world	level
+c	net/fabricmc/fabric/api/entity/event/v1/ServerEntityWorldChangeEvents$AfterEntityChange	net/fabricmc/fabric/api/entity/event/v1/ServerEntityLevelChangeEvents$AfterEntityChange
+	m	(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerLevel;)V	afterChangeWorld	afterChangeLevel
+c	net/fabricmc/fabric/api/entity/event/v1/ServerEntityWorldChangeEvents$AfterPlayerChange	net/fabricmc/fabric/api/entity/event/v1/ServerEntityLevelChangeEvents$AfterPlayerChange
+	m	(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerLevel;)V	afterChangeWorld	afterChangeLevel
+c	net/fabricmc/fabric/api/entity/event/v1/ServerEntityWorldChangeEvents	net/fabricmc/fabric/api/entity/event/v1/ServerEntityLevelChangeEvents
+	f	Lnet/fabricmc/fabric/api/event/Event;	AFTER_ENTITY_CHANGE_WORLD	AFTER_ENTITY_CHANGE_LEVEL
+	f	Lnet/fabricmc/fabric/api/event/Event;	AFTER_PLAYER_CHANGE_WORLD	AFTER_PLAYER_CHANGE_LEVEL
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerChunkEvents$LevelTypeChange	net/fabricmc/fabric/api/event/lifecycle/v1/ServerChunkEvents$FullChunkStatusChange
+	m	(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/server/level/FullChunkStatus;Lnet/minecraft/server/level/FullChunkStatus;)V	onChunkLevelTypeChange	onFullChunkStatusChange
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerChunkEvents	
+	f	Lnet/fabricmc/fabric/api/event/Event;	CHUNK_LEVEL_TYPE_CHANGE	FULL_CHUNK_STATUS_CHANGE
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerTickEvents$EndWorldTick	net/fabricmc/fabric/api/event/lifecycle/v1/ServerTickEvents$EndLevelTick
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerTickEvents$StartWorldTick	net/fabricmc/fabric/api/event/lifecycle/v1/ServerTickEvents$StartLevelTick
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerTickEvents	
+	f	Lnet/fabricmc/fabric/api/event/Event;	START_WORLD_TICK	START_LEVEL_TICK
+	f	Lnet/fabricmc/fabric/api/event/Event;	END_WORLD_TICK	END_LEVEL_TICK
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerWorldEvents$Load	net/fabricmc/fabric/api/event/lifecycle/v1/ServerLevelEvents$Load
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/server/level/ServerLevel;)V	onWorldLoad	onLevelLoad
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerWorldEvents$Unload	net/fabricmc/fabric/api/event/lifecycle/v1/ServerLevelEvents$Unload
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/server/level/ServerLevel;)V	onWorldUnload	onLevelUnload
+c	net/fabricmc/fabric/api/event/lifecycle/v1/ServerWorldEvents	net/fabricmc/fabric/api/event/lifecycle/v1/ServerLevelEvents
+c	net/fabricmc/fabric/api/event/registry/DynamicRegistryView	
+	m	()Lnet/minecraft/core/RegistryAccess;	asDynamicRegistryManager	asRegistryAccess
+c	net/fabricmc/fabric/api/event/registry/FabricRegistryBuilder	
+	m	(Lnet/minecraft/resources/ResourceKey;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;	createSimple	create
+	m	(Ljava/lang/Class;Lnet/minecraft/resources/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;	createSimple	create
+c	net/fabricmc/fabric/api/gamerule/v1/FabricGameRuleVisitor	net/fabricmc/fabric/api/gamerule/v1/FabricGameRuleTypeVisitor
+c	net/fabricmc/fabric/api/item/v1/ComponentTooltipAppenderRegistry	net/fabricmc/fabric/api/item/v1/ItemComponentTooltipProviderRegistry
+c	net/fabricmc/fabric/api/item/v1/CustomDamageHandler	
+	m	(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;Ljava/lang/Runnable;)I	damage	hurtAndBreak
+c	net/fabricmc/fabric/api/item/v1/EquipmentSlotProvider	
+	m	(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/EquipmentSlot;	getPreferredEquipmentSlot	getEquipmentSlotForItem
+c	net/fabricmc/fabric/api/item/v1/FabricItem$Settings	net/fabricmc/fabric/api/item/v1/FabricItem$Properties
+c	net/fabricmc/fabric/api/item/v1/FabricItem	
+	m	(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;	getRecipeRemainder	getCraftingRemainder
+c	net/fabricmc/fabric/api/item/v1/FabricItemStack	
+	m	()Lnet/minecraft/world/item/ItemStack;	getRecipeRemainder	getCraftingRemainder
+c	net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroup	net/fabricmc/fabric/api/creativetab/v1/FabricCreativeModeTab
+c	net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries$1	net/fabricmc/fabric/api/creativetab/v1/FabricCreativeModeTabOutput$1
+c	net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries	net/fabricmc/fabric/api/creativetab/v1/FabricCreativeModeTabOutput
+	m	(Lnet/minecraft/world/level/ItemLike;[Lnet/minecraft/world/item/ItemStack;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/item/ItemStack;[Lnet/minecraft/world/item/ItemStack;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/level/ItemLike;[Lnet/minecraft/world/level/ItemLike;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/item/ItemStack;[Lnet/minecraft/world/level/ItemLike;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/level/ItemLike;Ljava/util/Collection;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/item/ItemStack;Ljava/util/Collection;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/level/ItemLike;Ljava/util/Collection;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/item/ItemStack;Ljava/util/Collection;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V	addAfter	insertAfter
+	m	(Ljava/util/function/Predicate;Ljava/util/Collection;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/level/ItemLike;[Lnet/minecraft/world/item/ItemStack;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/item/ItemStack;[Lnet/minecraft/world/item/ItemStack;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/level/ItemLike;[Lnet/minecraft/world/level/ItemLike;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/item/ItemStack;[Lnet/minecraft/world/level/ItemLike;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/level/ItemLike;Ljava/util/Collection;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/item/ItemStack;Ljava/util/Collection;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/level/ItemLike;Ljava/util/Collection;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/item/ItemStack;Ljava/util/Collection;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V	addBefore	insertBefore
+	m	(Ljava/util/function/Predicate;Ljava/util/Collection;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V	addBefore	insertBefore
+	m	(Ljava/util/function/Predicate;Ljava/util/Collection;Ljava/util/List;)V	addBefore	insertBefore
+	m	(Ljava/util/function/Predicate;Ljava/util/Collection;Ljava/util/List;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/item/ItemStack;Ljava/util/Collection;Ljava/util/List;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/item/ItemStack;Ljava/util/Collection;Ljava/util/List;)V	addAfter	insertAfter
+	m	(Lnet/minecraft/world/level/ItemLike;Ljava/util/Collection;Ljava/util/List;)V	addBefore	insertBefore
+	m	(Lnet/minecraft/world/level/ItemLike;Ljava/util/Collection;Ljava/util/List;)V	addAfter	insertAfter
+c	net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries	net/fabricmc/fabric/api/creativetab/v1/CreativeModeTabEvents$ModifyOutput
+	m	(Lnet/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries;)V	modifyEntries	modifyOutput
+c	net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll	net/fabricmc/fabric/api/creativetab/v1/CreativeModeTabEvents$ModifyOutputAll
+	m	(Lnet/minecraft/world/item/CreativeModeTab;Lnet/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries;)V	modifyEntries	modifyOutput
+c	net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents	net/fabricmc/fabric/api/creativetab/v1/CreativeModeTabEvents
+	f	Lnet/fabricmc/fabric/api/event/Event;	MODIFY_ENTRIES_ALL	MODIFY_OUTPUT_ALL
+	m	(Lnet/minecraft/resources/ResourceKey;)Lnet/fabricmc/fabric/api/event/Event;	modifyEntriesEvent	modifyOutputEvent
+c	net/fabricmc/fabric/api/itemgroup/v1/package-info	net/fabricmc/fabric/api/creativetab/v1/package-info
+c	net/fabricmc/fabric/api/lookup/v1/block/BlockApiCache	
+	m	()Lnet/minecraft/server/level/ServerLevel;	getWorld	getLevel
+c	net/fabricmc/fabric/api/loot/v3/FabricLootPoolBuilder	
+	m	(Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer;)Lnet/minecraft/world/level/storage/loot/LootPool$Builder;	with	add
+	m	(Ljava/util/Collection;)Lnet/minecraft/world/level/storage/loot/LootPool$Builder;	with	add
+	m	(Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition;)Lnet/minecraft/world/level/storage/loot/LootPool$Builder;	conditionally	when
+	m	(Ljava/util/Collection;)Lnet/minecraft/world/level/storage/loot/LootPool$Builder;	conditionally	when
+c	net/fabricmc/fabric/api/networking/v1/FabricServerConfigurationNetworkHandler	net/fabricmc/fabric/api/networking/v1/FabricServerConfigurationPacketListenerImpl
+c	net/fabricmc/fabric/api/networking/v1/PacketByteBufs	net/fabricmc/fabric/api/networking/v1/FriendlyByteBufs
+	f	Lnet/minecraft/network/FriendlyByteBuf;	EMPTY_PACKET_BYTE_BUF	EMPTY_FRIENDLY_BYTE_BUF
+c	net/fabricmc/fabric/api/networking/v1/PayloadTypeRegistry	
+	m	()Lnet/fabricmc/fabric/api/networking/v1/PayloadTypeRegistry;	configurationC2S	serverboundConfiguration
+	m	()Lnet/fabricmc/fabric/api/networking/v1/PayloadTypeRegistry;	configurationS2C	clientboundConfiguration
+	m	()Lnet/fabricmc/fabric/api/networking/v1/PayloadTypeRegistry;	playC2S	serverboundPlay
+	m	()Lnet/fabricmc/fabric/api/networking/v1/PayloadTypeRegistry;	playS2C	clientboundPlay
+c	net/fabricmc/fabric/api/networking/v1/PlayerLookup	
+	m	(Lnet/minecraft/server/level/ServerLevel;)Ljava/util/Collection;	world	level
+c	net/fabricmc/fabric/api/networking/v1/S2CConfigurationChannelEvents$Register	net/fabricmc/fabric/api/networking/v1/ClientboundConfigurationChannelEvents$Register
+c	net/fabricmc/fabric/api/networking/v1/S2CConfigurationChannelEvents$Unregister	net/fabricmc/fabric/api/networking/v1/ClientboundConfigurationChannelEvents$Unregister
+c	net/fabricmc/fabric/api/networking/v1/S2CConfigurationChannelEvents	net/fabricmc/fabric/api/networking/v1/ClientboundConfigurationChannelEvents
+c	net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents$Register	net/fabricmc/fabric/api/networking/v1/ClientboundPlayChannelEvents$Register
+c	net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents$Unregister	net/fabricmc/fabric/api/networking/v1/ClientboundPlayChannelEvents$Unregister
+c	net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents	net/fabricmc/fabric/api/networking/v1/ClientboundPlayChannelEvents
+c	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking$Context	
+	m	()Lnet/minecraft/server/network/ServerConfigurationPacketListenerImpl;	networkHandler	packetListener
+c	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking	
+	m	(Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)Lnet/minecraft/network/protocol/Packet;	createS2CPacket	createClientboundPacket
+c	net/fabricmc/fabric/api/networking/v1/ServerPlayNetworking	
+	m	(Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)Lnet/minecraft/network/protocol/Packet;	createS2CPacket	createClientboundPacket
+c	net/fabricmc/fabric/api/object/builder/v1/block/entity/FabricBlockEntityType	
+	m	(Lnet/minecraft/world/level/block/Block;)V	addSupportedBlock	addValidBlock
+c	net/fabricmc/fabric/api/object/builder/v1/block/type/BlockSetTypeBuilder	
+	f	Lnet/minecraft/world/level/block/SoundType;	soundGroup	soundType
+	m	(Lnet/minecraft/world/level/block/SoundType;)Lnet/fabricmc/fabric/api/object/builder/v1/block/type/BlockSetTypeBuilder;	soundGroup	soundType
+c	net/fabricmc/fabric/api/object/builder/v1/block/type/WoodTypeBuilder	
+	f	Lnet/minecraft/world/level/block/SoundType;	soundGroup	soundType
+	f	Lnet/minecraft/world/level/block/SoundType;	hangingSignSoundGroup	hangingSignSoundType
+	m	(Lnet/minecraft/world/level/block/SoundType;)Lnet/fabricmc/fabric/api/object/builder/v1/block/type/WoodTypeBuilder;	soundGroup	soundType
+	m	(Lnet/minecraft/world/level/block/SoundType;)Lnet/fabricmc/fabric/api/object/builder/v1/block/type/WoodTypeBuilder;	hangingSignSoundGroup	hangingSignSoundType
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityType$Builder$Mob	
+	m	(Lnet/minecraft/world/entity/SpawnPlacementType;Lnet/minecraft/world/level/levelgen/Heightmap$Types;Lnet/minecraft/world/entity/SpawnPlacements$SpawnPredicate;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityType$Builder$Mob;	spawnRestriction	spawnPlacement
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living	
+	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living;	spawnGroup	mobCategory
+	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder;	spawnGroup	mobCategory
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob	
+	f	Lnet/minecraft/world/entity/SpawnPlacementType;	spawnLocation	spawnPlacementType
+	f	Lnet/minecraft/world/level/levelgen/Heightmap$Types;	restrictionHeightmap	placementHeightmap
+	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob;	spawnGroup	mobCategory
+	m	(Lnet/minecraft/world/entity/SpawnPlacementType;Lnet/minecraft/world/level/levelgen/Heightmap$Types;Lnet/minecraft/world/entity/SpawnPlacements$SpawnPredicate;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob;	spawnRestriction	spawnPlacement
+	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living;	spawnGroup	mobCategory
+	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder;	spawnGroup	mobCategory
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder	
+	f	Lnet/minecraft/world/entity/MobCategory;	spawnGroup	mobCategory
+	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder;	spawnGroup	mobCategory
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricTrackedDataRegistry	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityDataRegistry
+c	net/fabricmc/fabric/api/object/builder/v1/world/poi/PointOfInterestHelper	net/fabricmc/fabric/api/object/builder/v1/world/poi/PoiHelper
+c	net/fabricmc/fabric/api/particle/v1/FabricBlockStateParticleEffect	net/fabricmc/fabric/api/particle/v1/FabricBlockParticleOption
+c	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$2	
+	f	Lnet/minecraft/network/codec/StreamCodec;	val$packetCodec	val$streamCodec
+c	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$3	
+	f	Ljava/util/function/Function;	val$packetCodecGetter	val$streamCodecGetter
+c	net/fabricmc/fabric/api/recipe/v1/FabricRecipeManager	net/fabricmc/fabric/api/recipe/v1/FabricRecipeAccess
+c	net/fabricmc/fabric/api/recipe/v1/FabricServerRecipeManager	net/fabricmc/fabric/api/recipe/v1/FabricRecipeManager
+c	net/fabricmc/fabric/api/recipe/v1/ingredient/CustomIngredient	
+	m	()Ljava/util/stream/Stream;	getMatchingItems	items
+	m	()Lnet/minecraft/world/item/crafting/display/SlotDisplay;	toDisplay	display
+c	net/fabricmc/fabric/api/recipe/v1/ingredient/CustomIngredientSerializer	
+	m	()Lnet/minecraft/network/codec/StreamCodec;	getPacketCodec	getStreamCodec
+c	net/fabricmc/fabric/api/registry/CompostingChanceRegistry	net/fabricmc/fabric/api/registry/CompostableRegistry
+c	net/fabricmc/fabric/api/registry/FabricBrewingRecipeRegistryBuilder$BuildCallback	net/fabricmc/fabric/api/registry/FabricPotionBrewingBuilder$BuildCallback
+c	net/fabricmc/fabric/api/registry/FabricBrewingRecipeRegistryBuilder	net/fabricmc/fabric/api/registry/FabricPotionBrewingBuilder
+c	net/fabricmc/fabric/api/registry/FlammableBlockRegistry$Entry	
+	f	I	burn	igniteOdds
+	f	I	spread	burnOdds
+	m	()I	getBurnChance	getIgniteOdds
+	m	()I	getSpreadChance	getBurnOdds
+c	net/fabricmc/fabric/api/registry/FuelRegistryEvents$BuildCallback	net/fabricmc/fabric/api/registry/FuelValueEvents$BuildCallback
+c	net/fabricmc/fabric/api/registry/FuelRegistryEvents$Context	net/fabricmc/fabric/api/registry/FuelValueEvents$Context
+c	net/fabricmc/fabric/api/registry/FuelRegistryEvents$ExclusionsCallback	net/fabricmc/fabric/api/registry/FuelValueEvents$ExclusionsCallback
+c	net/fabricmc/fabric/api/registry/FuelRegistryEvents	net/fabricmc/fabric/api/registry/FuelValueEvents
+c	net/fabricmc/fabric/api/registry/LandPathNodeTypesRegistry$DynamicPathNodeTypeProvider	net/fabricmc/fabric/api/registry/LandPathTypeRegistry$DynamicPathTypeProvider
+	m	(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/level/pathfinder/PathType;	getPathNodeType	getPathType
+c	net/fabricmc/fabric/api/registry/LandPathNodeTypesRegistry$PathNodeTypeProvider	net/fabricmc/fabric/api/registry/LandPathTypeRegistry$PathTypeProvider
+c	net/fabricmc/fabric/api/registry/LandPathNodeTypesRegistry$StaticPathNodeTypeProvider	net/fabricmc/fabric/api/registry/LandPathTypeRegistry$StaticPathTypeProvider
+	m	(Lnet/minecraft/world/level/block/state/BlockState;Z)Lnet/minecraft/world/level/pathfinder/PathType;	getPathNodeType	getPathType
+c	net/fabricmc/fabric/api/registry/LandPathNodeTypesRegistry	net/fabricmc/fabric/api/registry/LandPathTypeRegistry
+	f	Ljava/util/Map;	NODE_TYPES	PATH_TYPES
+	m	(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/level/pathfinder/PathType;	getPathNodeType	getPathType
+	m	(Lnet/minecraft/world/level/block/Block;)Lnet/fabricmc/fabric/api/registry/LandPathNodeTypesRegistry$PathNodeTypeProvider;	getPathNodeTypeProvider	getPathTypeProvider
+c	net/fabricmc/fabric/api/registry/OxidizableBlocksRegistry	
+	m	(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V	registerOxidizableBlockPair	registerNextStage
+	m	(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V	registerWaxableBlockPair	registerWaxable
+	m	(Lnet/minecraft/world/level/block/WeatheringCopperBlocks;)V	registerCopperBlockSet	registerWeatheringCopperBlocks
+c	net/fabricmc/fabric/api/registry/SculkSensorFrequencyRegistry	net/fabricmc/fabric/api/registry/VibrationFrequencyRegistry
+c	net/fabricmc/fabric/api/registry/VillagerInteractionRegistries	
+	m	(Lnet/minecraft/world/level/ItemLike;)V	registerCollectable	registerGatherableItem
+c	net/fabricmc/fabric/api/renderer/v1/mesh/MutableQuadView	
+	m	(Lnet/minecraft/client/renderer/chunk/ChunkSectionLayer;)Lnet/fabricmc/fabric/api/renderer/v1/mesh/MutableQuadView;	renderLayer	chunkLayer
+	m	(Lnet/minecraft/client/renderer/item/ItemStackRenderState$FoilType;)Lnet/fabricmc/fabric/api/renderer/v1/mesh/MutableQuadView;	glint	foilType
+c	net/fabricmc/fabric/api/renderer/v1/mesh/QuadEmitter	
+	m	(Lnet/minecraft/client/renderer/chunk/ChunkSectionLayer;)Lnet/fabricmc/fabric/api/renderer/v1/mesh/QuadEmitter;	renderLayer	chunkLayer
+	m	(Lnet/minecraft/client/renderer/item/ItemStackRenderState$FoilType;)Lnet/fabricmc/fabric/api/renderer/v1/mesh/QuadEmitter;	glint	foilType
+	m	(Lnet/minecraft/client/renderer/item/ItemStackRenderState$FoilType;)Lnet/fabricmc/fabric/api/renderer/v1/mesh/MutableQuadView;	glint	foilType
+	m	(Lnet/minecraft/client/renderer/chunk/ChunkSectionLayer;)Lnet/fabricmc/fabric/api/renderer/v1/mesh/MutableQuadView;	renderLayer	chunkLayer
+c	net/fabricmc/fabric/api/renderer/v1/mesh/QuadView	
+	m	()Lnet/minecraft/client/renderer/chunk/ChunkSectionLayer;	renderLayer	chunkLayer
+	m	()Lnet/minecraft/client/renderer/item/ItemStackRenderState$FoilType;	glint	foilType
+c	net/fabricmc/fabric/api/renderer/v1/model/FabricBlockModels	net/fabricmc/fabric/api/renderer/v1/model/FabricBlockModelShaper
+	m	(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	getModelParticleSprite	getParticleIcon
+c	net/fabricmc/fabric/api/renderer/v1/model/FabricBlockStateModel	
+	m	(Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	particleSprite	particleIcon
+c	net/fabricmc/fabric/api/renderer/v1/model/MeshBakedGeometry	net/fabricmc/fabric/api/renderer/v1/model/MeshQuadCollection
+c	net/fabricmc/fabric/api/renderer/v1/model/ModelBakeSettingsHelper$1	net/fabricmc/fabric/api/renderer/v1/model/ModelStateHelper$1
+c	net/fabricmc/fabric/api/renderer/v1/model/ModelBakeSettingsHelper$2	net/fabricmc/fabric/api/renderer/v1/model/ModelStateHelper$2
+c	net/fabricmc/fabric/api/renderer/v1/model/ModelBakeSettingsHelper$3	net/fabricmc/fabric/api/renderer/v1/model/ModelStateHelper$3
+c	net/fabricmc/fabric/api/renderer/v1/model/ModelBakeSettingsHelper$4	net/fabricmc/fabric/api/renderer/v1/model/ModelStateHelper$4
+c	net/fabricmc/fabric/api/renderer/v1/model/ModelBakeSettingsHelper	net/fabricmc/fabric/api/renderer/v1/model/ModelStateHelper
+c	net/fabricmc/fabric/api/renderer/v1/render/BlockVertexConsumerProvider	net/fabricmc/fabric/api/renderer/v1/render/BlockMultiBufferSource
+c	net/fabricmc/fabric/api/renderer/v1/render/FabricBlockModelRenderer	net/fabricmc/fabric/api/renderer/v1/render/FabricModelBlockRenderer
+c	net/fabricmc/fabric/api/renderer/v1/render/FabricBlockRenderManager	net/fabricmc/fabric/api/renderer/v1/render/FabricBlockRenderDispatcher
+c	net/fabricmc/fabric/api/renderer/v1/render/FabricRenderCommandQueue	net/fabricmc/fabric/api/renderer/v1/render/FabricOrderedSubmitNodeCollector
+c	net/fabricmc/fabric/api/renderer/v1/render/RenderLayerHelper$1	net/fabricmc/fabric/api/renderer/v1/render/ChunkSectionLayerHelper$1
+c	net/fabricmc/fabric/api/renderer/v1/render/RenderLayerHelper	net/fabricmc/fabric/api/renderer/v1/render/ChunkSectionLayerHelper
+c	net/fabricmc/fabric/api/renderer/v1/sprite/FabricErrorCollectingSpriteGetter	net/fabricmc/fabric/api/renderer/v1/sprite/FabricSpriteGetter
+c	net/fabricmc/fabric/api/renderer/v1/sprite/FabricSpriteAtlasTexture	net/fabricmc/fabric/api/renderer/v1/sprite/FabricPreparations
+c	net/fabricmc/fabric/api/renderer/v1/sprite/FabricStitchResult	net/fabricmc/fabric/api/renderer/v1/sprite/FabricTextureAtlas
+c	net/fabricmc/fabric/api/resource/v1/DataResourceLoader	
+	m	(Lnet/minecraft/resources/Identifier;Ljava/util/function/Function;)V	registerReloader	registerReloadListener
+c	net/fabricmc/fabric/api/resource/v1/ResourceLoader	
+	f	Lnet/minecraft/server/packs/resources/PreparableReloadListener$StateKey;	RELOADER_REGISTRY_LOOKUP_KEY	REGISTRY_LOOKUP_KEY
+	f	Lnet/minecraft/server/packs/resources/PreparableReloadListener$StateKey;	RELOADER_FEATURE_SET_KEY	FEATURE_FLAG_SET_KEY
+	m	(Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/PreparableReloadListener;)V	registerReloader	registerReloadListener
+	m	(Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)V	addReloaderOrdering	addListenerOrdering
+c	net/fabricmc/fabric/api/resource/v1/reloader/ResourceReloaderKeys$Client	
+	f	Lnet/minecraft/resources/Identifier;	BLOCK_ENTITY_RENDERERS	BLOCK_ENTITY_RENDER_DISPATCHER
+	f	Lnet/minecraft/resources/Identifier;	BLOCK_RENDER_MANAGER	BLOCK_RENDER_DISPATCHER
+	f	Lnet/minecraft/resources/Identifier;	CLOUD_CELLS	CLOUD_RENDERER
+	f	Lnet/minecraft/resources/Identifier;	EQUIPMENT_MODELS	EQUIPMENT_ASSETS
+	f	Lnet/minecraft/resources/Identifier;	ENTITY_RENDERERS	ENTITY_RENDER_DISPATCHER
+	f	Lnet/minecraft/resources/Identifier;	DRY_FOLIAGE_COLORMAP	DRY_FOLIAGE_COLOR
+	f	Lnet/minecraft/resources/Identifier;	FOLIAGE_COLORMAP	FOLIAGE_COLOR
+	f	Lnet/minecraft/resources/Identifier;	GRASS_COLORMAP	GRASS_COLOR
+	f	Lnet/minecraft/resources/Identifier;	WAYPOINT_STYLE_ASSETS	WAYPOINT_STYLE
+c	net/fabricmc/fabric/api/resource/v1/reloader/SimpleResourceReloader	net/fabricmc/fabric/api/resource/v1/reloader/SimpleReloadListener
+c	net/fabricmc/fabric/api/screenhandler/v1/ExtendedScreenHandlerFactory	net/fabricmc/fabric/api/menu/v1/ExtendedMenuProvider
+c	net/fabricmc/fabric/api/screenhandler/v1/ExtendedScreenHandlerType$ExtendedFactory	net/fabricmc/fabric/api/menu/v1/ExtendedMenuType$ExtendedFactory
+c	net/fabricmc/fabric/api/screenhandler/v1/ExtendedScreenHandlerType	net/fabricmc/fabric/api/menu/v1/ExtendedMenuType
+	f	Lnet/minecraft/network/codec/StreamCodec;	packetCodec	streamCodec
+	m	()Lnet/minecraft/network/codec/StreamCodec;	getPacketCodec	getStreamCodec
+c	net/fabricmc/fabric/api/screenhandler/v1/FabricScreenHandlerFactory	net/fabricmc/fabric/api/menu/v1/FabricMenuProvider
+c	net/fabricmc/fabric/api/screenhandler/v1/package-info	net/fabricmc/fabric/api/menu/v1/package-info
+c	net/fabricmc/fabric/api/serialization/v1/view/FabricReadView	net/fabricmc/fabric/api/serialization/v1/value/FabricValueInput
+	m	()Ljava/util/Collection;	keys	keySet
+c	net/fabricmc/fabric/api/serialization/v1/view/FabricWriteView	net/fabricmc/fabric/api/serialization/v1/value/FabricValueOutput
+c	net/fabricmc/fabric/api/serialization/v1/view/package-info	net/fabricmc/fabric/api/serialization/v1/value/package-info
+c	net/fabricmc/fabric/api/transfer/v1/fluid/FluidVariant	
+	m	()Lnet/minecraft/core/Holder;	getRegistryEntry	typeHolder
+	m	(Lnet/minecraft/core/component/DataComponentPatch;)Lnet/fabricmc/fabric/api/transfer/v1/fluid/FluidVariant;	withComponentChanges	withComponents
+	m	(Lnet/minecraft/core/component/DataComponentPatch;)Lnet/fabricmc/fabric/api/transfer/v1/storage/TransferVariant;	withComponentChanges	withComponents
+c	net/fabricmc/fabric/api/transfer/v1/fluid/FluidVariantAttributeHandler	
+	m	(Lnet/fabricmc/fabric/api/transfer/v1/fluid/FluidVariant;)I	getLuminance	getLightEmission
+c	net/fabricmc/fabric/api/transfer/v1/fluid/base/SingleFluidStorage	
+	m	(Lnet/minecraft/world/level/storage/ValueInput;)V	readData	readValue
+	m	(Lnet/minecraft/world/level/storage/ValueOutput;)V	writeData	writeValue
+c	net/fabricmc/fabric/api/transfer/v1/item/InventoryStorage	net/fabricmc/fabric/api/transfer/v1/item/ContainerStorage
+c	net/fabricmc/fabric/api/transfer/v1/item/ItemVariant	
+	m	()Lnet/minecraft/core/Holder;	getRegistryEntry	typeHolder
+	m	(Lnet/minecraft/core/component/DataComponentPatch;)Lnet/fabricmc/fabric/api/transfer/v1/item/ItemVariant;	withComponentChanges	withComponents
+	m	(Lnet/minecraft/core/component/DataComponentPatch;)Lnet/fabricmc/fabric/api/transfer/v1/storage/TransferVariant;	withComponentChanges	withComponents
+c	net/fabricmc/fabric/api/transfer/v1/item/base/SingleItemStorage	
+	m	(Lnet/minecraft/world/level/storage/ValueInput;)V	readData	readValue
+	m	(Lnet/minecraft/world/level/storage/ValueOutput;)V	writeData	writeValue
+c	net/fabricmc/fabric/api/transfer/v1/storage/StorageUtil	
+	m	(Lnet/fabricmc/fabric/api/transfer/v1/storage/Storage;)I	calculateComparatorOutput	getRedstoneSignal
+c	net/fabricmc/fabric/api/transfer/v1/storage/TransferVariant	
+	m	()Lnet/minecraft/core/component/DataComponentPatch;	getComponents	getComponentsPatch
+	m	()Lnet/minecraft/core/component/DataComponentMap;	getComponentMap	getComponents
+	m	(Lnet/minecraft/core/component/DataComponentPatch;)Lnet/fabricmc/fabric/api/transfer/v1/storage/TransferVariant;	withComponentChanges	withComponents
+c	net/fabricmc/fabric/api/transfer/v1/storage/base/SingleVariantStorage	
+	m	(Lnet/fabricmc/fabric/api/transfer/v1/storage/base/SingleVariantStorage;Lcom/mojang/serialization/Codec;Ljava/util/function/Supplier;Lnet/minecraft/world/level/storage/ValueInput;)V	readData	readValue
+	m	(Lnet/fabricmc/fabric/api/transfer/v1/storage/base/SingleVariantStorage;Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/ValueOutput;)V	writeData	writeValue
