@@ -19,7 +19,6 @@ public abstract class StubJarTask extends Jar {
 
     @Override
     protected void copy() {
-        super.copy();
         var outFile = getArchiveFile().get().getAsFile();
 
         try (var outJar = new JarOutputStream(new FileOutputStream(outFile))) {

@@ -1,5 +1,5 @@
 tiny	2	0	old	renamed
-c	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext	
+c	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext	net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext
 	m	(Ljava/util/Optional;)V	setFoliageColor	setFoliageColorOverride
 	m	(I)V	setFoliageColor	setFoliageColorOverride
 	m	(Ljava/util/OptionalInt;)V	setFoliageColor	setFoliageColorOverride
@@ -45,9 +45,9 @@ c	net/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper	net/fabricmc/fab
 	m	(Lnet/minecraft/client/KeyMapping;)Lnet/minecraft/client/KeyMapping;	registerKeyBinding	registerKeyMapping
 c	net/fabricmc/fabric/api/client/keybinding/v1/package-info	net/fabricmc/fabric/api/client/keymapping/v1/package-info
 c	net/fabricmc/fabric/api/client/model/loading/v1/FabricBakedModelManager	net/fabricmc/fabric/api/client/model/loading/v1/FabricModelManager
-c	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeItem$Context	
+c	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeItem$Context	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeItem$Context
 	m	()Lnet/minecraft/client/renderer/item/ItemModel$BakingContext;	bakeContext	bakingContext
-c	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeItem$Context	
+c	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeItem$Context	net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeItem$Context
 	m	()Lnet/minecraft/client/renderer/item/ItemModel$BakingContext;	bakeContext	bakingContext
 c	net/fabricmc/fabric/api/client/model/loading/v1/wrapper/WrapperUnbakedGroupedBlockStateModel	net/fabricmc/fabric/api/client/model/loading/v1/wrapper/WrapperUnbakedRootBlockStateModel
 c	net/fabricmc/fabric/api/client/networking/v1/C2SConfigurationChannelEvents$Register	net/fabricmc/fabric/api/client/networking/v1/ServerboundConfigurationChannelEvents$Register
@@ -56,7 +56,7 @@ c	net/fabricmc/fabric/api/client/networking/v1/C2SConfigurationChannelEvents	net
 c	net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents$Register	net/fabricmc/fabric/api/client/networking/v1/ServerboundPlayChannelEvents$Register
 c	net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents$Unregister	net/fabricmc/fabric/api/client/networking/v1/ServerboundPlayChannelEvents$Unregister
 c	net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents	net/fabricmc/fabric/api/client/networking/v1/ServerboundPlayChannelEvents
-c	net/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context	
+c	net/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context	net/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context
 	m	()Lnet/minecraft/client/multiplayer/ClientConfigurationPacketListenerImpl;	networkHandler	packetListener
 c	net/fabricmc/fabric/api/client/networking/v1/ClientPlayNetworking	net/fabricmc/fabric/api/client/networking/v1/ClientPlayNetworking
 	m	(Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)Lnet/minecraft/network/protocol/Packet;	createC2SPacket	createServerboundPacket
@@ -130,7 +130,7 @@ c	net/fabricmc/fabric/api/datagen/v1/provider/FabricBlockLootTableProvider	net/f
 	f	Ljava/util/concurrent/CompletableFuture;	registryLookupFuture	registriesFuture
 c	net/fabricmc/fabric/api/datagen/v1/provider/FabricCodecDataProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricCodecDataProvider
 	f	Lnet/minecraft/data/PackOutput$PathProvider;	pathResolver	pathProvider
-c	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider$RegistryEntries	
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider$RegistryEntries	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider$RegistryEntries
 	f	Ljava/util/Map;	entries	resources
 c	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider
 	m	(Lnet/minecraft/data/CachedOutput;Lnet/minecraft/resources/RegistryOps;Lnet/fabricmc/fabric/api/datagen/v1/provider/FabricDynamicRegistryProvider$RegistryEntries;)Ljava/util/concurrent/CompletableFuture;	writeRegistryEntries	writeHolders
@@ -141,9 +141,9 @@ c	net/fabricmc/fabric/api/datagen/v1/provider/FabricLanguageProvider	net/fabricm
 	f	Lnet/fabricmc/fabric/api/datagen/v1/FabricDataOutput;	dataOutput	packOutput
 c	net/fabricmc/fabric/api/datagen/v1/provider/FabricLootTableProvider	net/fabricmc/fabric/api/datagen/v1/provider/FabricLootTableSubProvider
 c	net/fabricmc/fabric/api/datagen/v1/provider/FabricProvidedTagBuilder	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagAppender
-c	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$1	
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$1	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$1
 	f	Lnet/minecraft/data/recipes/RecipeOutput;	val$exporter	val$output
-c	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$2	
+c	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$2	net/fabricmc/fabric/api/datagen/v1/provider/FabricRecipeProvider$2
 	f	Lnet/minecraft/core/HolderLookup$Provider;	val$wrapperLookup	val$registries
 	f	Lnet/minecraft/data/CachedOutput;	val$writer	val$output
 c	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagProvider$AliasGroupBuilder	net/fabricmc/fabric/api/datagen/v1/provider/FabricTagsProvider$AliasGroupBuilder
@@ -158,7 +158,7 @@ c	net/fabricmc/fabric/api/datagen/v1/provider/SimpleFabricLootTableProvider	net/
 	f	Ljava/util/concurrent/CompletableFuture;	registryLookup	registryLookupFuture
 	f	Lnet/minecraft/util/context/ContextKeySet;	contextType	contextParamSet
 c	net/fabricmc/fabric/api/datagen/v1/recipe/FabricRecipeExporter	net/fabricmc/fabric/api/datagen/v1/recipe/FabricRecipeOutput
-c	net/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey	
+c	net/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey	net/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey
 	f	Lnet/minecraft/server/level/ServerLevel;	world	level
 	m	()Lnet/minecraft/server/level/ServerLevel;	world	level
 c	net/fabricmc/fabric/api/entity/event/v1/ServerEntityWorldChangeEvents$AfterEntityChange	net/fabricmc/fabric/api/entity/event/v1/ServerEntityLevelChangeEvents$AfterEntityChange
@@ -256,7 +256,7 @@ c	net/fabricmc/fabric/api/networking/v1/S2CConfigurationChannelEvents	net/fabric
 c	net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents$Register	net/fabricmc/fabric/api/networking/v1/ClientboundPlayChannelEvents$Register
 c	net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents$Unregister	net/fabricmc/fabric/api/networking/v1/ClientboundPlayChannelEvents$Unregister
 c	net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents	net/fabricmc/fabric/api/networking/v1/ClientboundPlayChannelEvents
-c	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking$Context	
+c	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking$Context	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking$Context
 	m	()Lnet/minecraft/server/network/ServerConfigurationPacketListenerImpl;	networkHandler	packetListener
 c	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking	net/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking
 	m	(Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)Lnet/minecraft/network/protocol/Packet;	createS2CPacket	createClientboundPacket
@@ -272,12 +272,12 @@ c	net/fabricmc/fabric/api/object/builder/v1/block/type/WoodTypeBuilder	net/fabri
 	f	Lnet/minecraft/world/level/block/SoundType;	hangingSignSoundGroup	hangingSignSoundType
 	m	(Lnet/minecraft/world/level/block/SoundType;)Lnet/fabricmc/fabric/api/object/builder/v1/block/type/WoodTypeBuilder;	soundGroup	soundType
 	m	(Lnet/minecraft/world/level/block/SoundType;)Lnet/fabricmc/fabric/api/object/builder/v1/block/type/WoodTypeBuilder;	hangingSignSoundGroup	hangingSignSoundType
-c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityType$Builder$Mob	
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityType$Builder$Mob	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityType$Builder$Mob
 	m	(Lnet/minecraft/world/entity/SpawnPlacementType;Lnet/minecraft/world/level/levelgen/Heightmap$Types;Lnet/minecraft/world/entity/SpawnPlacements$SpawnPredicate;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityType$Builder$Mob;	spawnRestriction	spawnPlacement
-c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living	
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living
 	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Living;	spawnGroup	mobCategory
 	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder;	spawnGroup	mobCategory
-c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob	
+c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob
 	f	Lnet/minecraft/world/entity/SpawnPlacementType;	spawnLocation	spawnPlacementType
 	f	Lnet/minecraft/world/level/levelgen/Heightmap$Types;	restrictionHeightmap	placementHeightmap
 	m	(Lnet/minecraft/world/entity/MobCategory;)Lnet/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder$Mob;	spawnGroup	mobCategory
@@ -290,9 +290,9 @@ c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder	net/f
 c	net/fabricmc/fabric/api/object/builder/v1/entity/FabricTrackedDataRegistry	net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityDataRegistry
 c	net/fabricmc/fabric/api/object/builder/v1/world/poi/PointOfInterestHelper	net/fabricmc/fabric/api/object/builder/v1/world/poi/PoiHelper
 c	net/fabricmc/fabric/api/particle/v1/FabricBlockStateParticleEffect	net/fabricmc/fabric/api/particle/v1/FabricBlockParticleOption
-c	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$2	
+c	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$2	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$2
 	f	Lnet/minecraft/network/codec/StreamCodec;	val$packetCodec	val$streamCodec
-c	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$3	
+c	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$3	net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$3
 	f	Ljava/util/function/Function;	val$packetCodecGetter	val$streamCodecGetter
 c	net/fabricmc/fabric/api/recipe/v1/FabricRecipeManager	net/fabricmc/fabric/api/recipe/v1/FabricRecipeAccess
 c	net/fabricmc/fabric/api/recipe/v1/FabricServerRecipeManager	net/fabricmc/fabric/api/recipe/v1/FabricRecipeManager
@@ -304,7 +304,7 @@ c	net/fabricmc/fabric/api/recipe/v1/ingredient/CustomIngredientSerializer	net/fa
 c	net/fabricmc/fabric/api/registry/CompostingChanceRegistry	net/fabricmc/fabric/api/registry/CompostableRegistry
 c	net/fabricmc/fabric/api/registry/FabricBrewingRecipeRegistryBuilder$BuildCallback	net/fabricmc/fabric/api/registry/FabricPotionBrewingBuilder$BuildCallback
 c	net/fabricmc/fabric/api/registry/FabricBrewingRecipeRegistryBuilder	net/fabricmc/fabric/api/registry/FabricPotionBrewingBuilder
-c	net/fabricmc/fabric/api/registry/FlammableBlockRegistry$Entry	
+c	net/fabricmc/fabric/api/registry/FlammableBlockRegistry$Entry	net/fabricmc/fabric/api/registry/FlammableBlockRegistry$Entry
 	f	I	burn	igniteOdds
 	f	I	spread	burnOdds
 	m	()I	getBurnChance	getIgniteOdds
@@ -366,7 +366,7 @@ c	net/fabricmc/fabric/api/resource/v1/ResourceLoader	net/fabricmc/fabric/api/res
 	f	Lnet/minecraft/server/packs/resources/PreparableReloadListener$StateKey;	RELOADER_FEATURE_SET_KEY	FEATURE_FLAG_SET_KEY
 	m	(Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/PreparableReloadListener;)V	registerReloader	registerReloadListener
 	m	(Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)V	addReloaderOrdering	addListenerOrdering
-c	net/fabricmc/fabric/api/resource/v1/reloader/ResourceReloaderKeys$Client	
+c	net/fabricmc/fabric/api/resource/v1/reloader/ResourceReloaderKeys$Client	net/fabricmc/fabric/api/resource/v1/reloader/ResourceReloaderKeys$Client
 	f	Lnet/minecraft/resources/Identifier;	BLOCK_ENTITY_RENDERERS	BLOCK_ENTITY_RENDER_DISPATCHER
 	f	Lnet/minecraft/resources/Identifier;	BLOCK_RENDER_MANAGER	BLOCK_RENDER_DISPATCHER
 	f	Lnet/minecraft/resources/Identifier;	CLOUD_CELLS	CLOUD_RENDERER

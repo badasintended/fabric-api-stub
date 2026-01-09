@@ -1,5 +1,6 @@
 repositories {
     mavenCentral()
+    maven { url 'https://maven.fabricmc.net' }
 }
 
 dependencies {
@@ -8,4 +9,6 @@ dependencies {
 
     implementation 'com.google.guava:guava:33.5.0-jre'
     implementation 'com.google.code.gson:gson:2.13.2'
+
+    implementation 'net.fabricmc:mapping-io:0.8.0'
 }

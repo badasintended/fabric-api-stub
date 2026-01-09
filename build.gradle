@@ -35,24 +35,25 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-	withSourcesJar()
-
 	sourceCompatibility = JavaVersion.VERSION_25
 	targetCompatibility = JavaVersion.VERSION_25
 }
 
-tasks.register('collectFapiMetadata', CollectMetadataTask) {
+tasks.register('collectFapiMetadata', RemapMetadataTask) {
 	group 'build'
 
-	archiveClassifier = 'metadata'
 	mods = project.configurations.fabricApi
+	modId = project.archives_base_name
+
+	mapping = file('renames.tiny')
+	sourceNamespace = 'renamed'
+	targetNamespace = 'old'
 }
 
 tasks.register('shadeFapiJar', ShadowJar) {
 	group 'build'
-	dependsOn 'collectFapiMetadata'
 
-	archiveClassifier = 'new'
+	archiveClassifier = 'shade'
 	configurations = [project.configurations.fabricApi]
 	include 'net/fabricmc/fabric/api/**/*.class'
 	exclude '**/package-info.class'
@@ -62,7 +63,7 @@ tasks.register('remapFapiJar', RemapJarTask) {
 	group 'build'
 	dependsOn 'shadeFapiJar'
 
-	archiveClassifier = 'old'
+	archiveClassifier = 'remapped'
 	inputFile = tasks.shadeFapiJar.archiveFile
 	classpath = sourceSets.main.compileClasspath
 
@@ -73,26 +74,32 @@ tasks.register('remapFapiJar', RemapJarTask) {
 
 tasks.register('stubFapiJar', StubJarTask) {
 	group 'build'
-	dependsOn 'remapFapiJar', 'collectFapiMetadata'
+	dependsOn 'remapFapiJar'
 
-	archiveClassifier = 'stub'
-	inputJars = files(tasks.remapFapiJar.archiveFile, tasks.collectFapiMetadata.archiveFile)
+	archiveClassifier = 'stubbed'
+	inputJars = files(tasks.remapFapiJar.archiveFile)
 }
 
-jar {
-	inputs.property "archivesName", project.base.archivesName
+tasks.register('finalJar', Jar) {
+	group 'build'
+	dependsOn 'stubFapiJar', 'collectFapiMetadata'
 
-	from("LICENSE") {
-		rename { "${it}_${inputs.properties.archivesName}"}
-	}
+	archiveClassifier = null
+	from zipTree(tasks.stubFapiJar.archiveFile)
+	from tasks.collectFapiMetadata.fmj
+	from tasks.collectFapiMetadata.classTweaker
 }
+
+tasks.jar.enabled = false
+tasks.remapJar.enabled = false
+tasks.shadowJar.enabled = false
 
 // configure the maven publication
 publishing {
 	publications {
 		create("mavenJava", MavenPublication) {
 			artifactId = project.archives_base_name
-			artifact(tasks.stubFapiJar) {
+			artifact(tasks.finalJar) {
 				classifier = null
 			}
 		}
