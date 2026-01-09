@@ -41,12 +41,21 @@ java {
 	targetCompatibility = JavaVersion.VERSION_25
 }
 
+tasks.register('collectFapiMetadata', CollectMetadataTask) {
+	group 'build'
+
+	archiveClassifier = 'metadata'
+	mods = project.configurations.fabricApi
+}
+
 tasks.register('shadeFapiJar', ShadowJar) {
 	group 'build'
+	dependsOn 'collectFapiMetadata'
 
 	archiveClassifier = 'new'
 	configurations = [project.configurations.fabricApi]
 	include 'net/fabricmc/fabric/api/**/*.class'
+	exclude '**/package-info.class'
 }
 
 tasks.register('remapFapiJar', RemapJarTask) {
@@ -62,12 +71,12 @@ tasks.register('remapFapiJar', RemapJarTask) {
 	targetNamespace = 'old'
 }
 
-tasks.register('stubFapiJar', StubJar) {
+tasks.register('stubFapiJar', StubJarTask) {
 	group 'build'
-	dependsOn 'remapFapiJar'
+	dependsOn 'remapFapiJar', 'collectFapiMetadata'
 
 	archiveClassifier = 'stub'
-	inputJar = tasks.remapFapiJar.archiveFile
+	inputJars = files(tasks.remapFapiJar.archiveFile, tasks.collectFapiMetadata.archiveFile)
 }
 
 jar {
